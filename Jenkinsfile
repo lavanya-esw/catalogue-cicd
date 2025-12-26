@@ -6,6 +6,9 @@ pipeline{
     }
     environment{
         appVersion = ""
+        ACC_ID = "500532068743"
+        PROJECT = "roboshop"
+        COMPONENT = "catalogue"
     }
     stages{
         stage('Read Version'){
@@ -27,11 +30,6 @@ pipeline{
             }
         }
         stage('build'){
-            environment{
-                ACC_ID = "500532068743"
-                PROJECT = "roboshop"
-                COMPONENT = "catalogue"
-            }
             steps{
                 script{
                     wwithAWS(region:'us-east-1',credentials:'aws-access'){
