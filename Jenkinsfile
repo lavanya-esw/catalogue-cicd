@@ -10,6 +10,9 @@ pipeline{
         PROJECT = "roboshop"
         COMPONENT = "catalogue"
     }
+    options{
+        ansicolor('xtrem')
+    }
     stages{
         stage('Read Version'){
             steps{
