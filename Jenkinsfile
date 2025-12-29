@@ -11,7 +11,7 @@ pipeline{
         COMPONENT = "catalogue"
     }
     options{
-        ansicolor('xterm')
+        ansiColor('xterm')
     }
     stages{
         stage('Read Version'){
