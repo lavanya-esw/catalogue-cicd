@@ -34,7 +34,7 @@ pipeline{
                 GITHUB_OWNER = 'lavanya-esw'
                 GITHUB_REPO  = 'catalogue-cicd'
                 GITHUB_API   = 'https://api.github.com'
-                GITHUB_TOKEN = credentials('GITHUB_TOKEN')
+                GITHUB_TOKEN = credentials('GITHUB-TOKEN')
             }
 
             steps {
@@ -73,8 +73,7 @@ pipeline{
                     else
                         echo "✅ No OPEN HIGH/CRITICAL Dependabot alerts found"
                     fi
-                    '''
-                    
+                    ''' 
                 }
             }
         }
