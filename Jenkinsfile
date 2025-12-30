@@ -7,7 +7,7 @@ def configMap = [
 
 // if branch is not equal to main, then run CI pipeline
 if ( ! env.BRANCH_NAME.equalsIgnoreCase('main') ){
-    nodeJSEKSPipeline(configMap)
+    nodeJSEKSpipeline(configMap)
 }
 else {
     echo "Please follow the CR process"
