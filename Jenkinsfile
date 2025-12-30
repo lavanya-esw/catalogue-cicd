@@ -1,10 +1,10 @@
-@Library('jenkins-shared-library') _
+@Library('jenkins-shared-library@new-feature') _
 def configMap= [
     project:"roboshop"
     component:"catalogue"
 ]
 
-if( ! env.BRANCH_NAME.equalsIgnore(main)){
+if( ! env.BRANCH_NAME.equalsIgnoreCase(main)){
     nodejsEKSpipeline(configMap)
 }
 else{
